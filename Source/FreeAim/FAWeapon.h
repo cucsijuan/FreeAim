@@ -7,26 +7,18 @@
 #include "FAWeapon.generated.h"
 
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class FREEAIM_API UFAWeapon : public UActorComponent
+UCLASS()
+class FREEAIM_API AFAWeapon : public AActor
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UFAWeapon();
+	AFAWeapon();
 
 protected:
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
-	class USkeletalMeshComponent* WeaponMesh;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	class UStaticMeshComponent* WeaponMesh;
 
-	// Called when the game starts
-	virtual void BeginPlay() override;
-
-public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
-		
 };
