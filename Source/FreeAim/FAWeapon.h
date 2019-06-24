@@ -18,6 +18,7 @@ public:
 
 protected:
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	class USkeletalMeshComponent* WeaponMesh;
 
 	// Called when the game starts
